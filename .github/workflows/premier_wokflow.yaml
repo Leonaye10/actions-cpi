@@ -1,0 +1,12 @@
+name: Toto
+on: [push]
+jobs:
+  MonPremierJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recup du repo
+        uses: actions/checkout@v3
+        with:
+          ref: "refs/tags/1.0.0"
+      - name: afficher le contenu de mon job
+        run: ls
